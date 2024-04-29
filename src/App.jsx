@@ -6,6 +6,7 @@ import Movie from "./movie";
 function App() {
   const [count, setCount] = useState(0);
   const [countTwo, setCountTwo] = useState(0);
+  const [inline, setInline] = useState(0);
   const [countWithParam, setCountWithParam] = useState(0);
   const [moviesList, setMoviesList] = useState(movies);
   console.log(moviesList);
@@ -31,6 +32,14 @@ function App() {
         className="btn btn-primary"
       >
         Increase By Two
+      </button>
+      <h3>{inline}</h3>
+      <button
+        type="button"
+        onClick={() => setInline((prev) => prev + 5)}
+        className="btn btn-primary"
+      >
+        Using Inline
       </button>
       <h3>{countWithParam}</h3>
       <button
